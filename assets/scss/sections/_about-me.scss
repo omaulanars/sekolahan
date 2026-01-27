@@ -1,0 +1,398 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# About Me Section
+--------------------------------------------------------------*/
+.about-me {
+  --spacing-xs: 8px;
+  --spacing-sm: 16px;
+  --spacing-md: 24px;
+  --spacing-lg: 40px;
+  --spacing-xl: 64px;
+  --border-radius: 12px;
+  --card-shadow: 0 8px 32px color-mix(in srgb, var(--default-color), transparent 92%);
+
+  .container {
+    max-width: 1200px;
+  }
+
+  .profile-header {
+    margin-bottom: var(--spacing-xl);
+
+    .profile-image-wrapper {
+      position: relative;
+      border-radius: var(--border-radius);
+      overflow: hidden;
+
+      .profile-image {
+        width: 100%;
+        height: auto;
+        transition: transform 0.3s ease;
+      }
+
+      .image-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(45deg, color-mix(in srgb, var(--accent-color), transparent 80%), transparent);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      &:hover {
+        .profile-image {
+          transform: scale(1.05);
+        }
+
+        .image-overlay {
+          opacity: 1;
+        }
+      }
+    }
+
+    .profile-intro {
+      .intro-tag {
+        display: inline-block;
+        padding: 4px 12px;
+        background: color-mix(in srgb, var(--accent-color), transparent 90%);
+        color: var(--accent-color);
+        border-radius: 20px;
+        font-size: 12px;
+        font-weight: 500;
+        margin-bottom: var(--spacing-sm);
+      }
+
+      .profile-name {
+        font-family: var(--heading-font);
+        font-weight: 700;
+        font-size: clamp(32px, 5vw, 48px);
+        margin: 0 0 var(--spacing-xs) 0;
+        color: var(--heading-color);
+      }
+
+      .profile-title {
+        font-size: 18px;
+        color: color-mix(in srgb, var(--default-color), transparent 20%);
+        margin-bottom: var(--spacing-md);
+      }
+
+      .profile-stats {
+        display: flex;
+        gap: var(--spacing-md);
+        margin-bottom: var(--spacing-md);
+
+        .stat-item {
+          text-align: center;
+
+          .stat-number {
+            display: block;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--accent-color);
+          }
+
+          .stat-label {
+            font-size: 12px;
+            color: color-mix(in srgb, var(--default-color), transparent 30%);
+          }
+        }
+      }
+
+      .profile-description {
+        font-size: 16px;
+        line-height: 1.7;
+        color: color-mix(in srgb, var(--default-color), transparent 10%);
+        margin-bottom: var(--spacing-md);
+      }
+
+      .profile-actions {
+        display: flex;
+        gap: var(--spacing-sm);
+
+        .btn-primary {
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          padding: 12px 24px;
+          background: var(--accent-color);
+          color: var(--contrast-color);
+          border-radius: var(--border-radius);
+          font-weight: 500;
+          transition: all 0.3s ease;
+
+          &:hover {
+            background: color-mix(in srgb, var(--accent-color), black 15%);
+            transform: translateY(-2px);
+          }
+        }
+
+        .btn-secondary {
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          padding: 12px 20px;
+          border: 2px solid color-mix(in srgb, var(--default-color), transparent 70%);
+          color: var(--default-color);
+          border-radius: var(--border-radius);
+          font-weight: 500;
+          transition: all 0.3s ease;
+
+          &:hover {
+            border-color: var(--accent-color);
+            color: var(--accent-color);
+          }
+        }
+      }
+    }
+  }
+
+  .expertise-grid {
+    margin-bottom: var(--spacing-xl);
+
+    .expertise-card {
+      padding: var(--spacing-md);
+      background: var(--surface-color);
+      border-radius: var(--border-radius);
+      border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+      transition: all 0.3s ease;
+      height: 100%;
+
+      &:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--card-shadow);
+        border-color: color-mix(in srgb, var(--accent-color), transparent 70%);
+      }
+
+      .card-icon {
+        width: 60px;
+        height: 60px;
+        background: color-mix(in srgb, var(--accent-color), transparent 92%);
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: var(--spacing-md);
+
+        i {
+          font-size: 24px;
+          color: var(--accent-color);
+        }
+      }
+
+      h3 {
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: var(--spacing-sm);
+        color: var(--heading-color);
+      }
+
+      p {
+        font-size: 14px;
+        line-height: 1.6;
+        color: color-mix(in srgb, var(--default-color), transparent 25%);
+        margin-bottom: var(--spacing-sm);
+      }
+
+      .skill-level {
+        display: inline-block;
+        padding: 4px 12px;
+        background: color-mix(in srgb, var(--accent-color), transparent 90%);
+        color: var(--accent-color);
+        border-radius: 20px;
+        font-size: 12px;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .journey-timeline {
+    margin-bottom: var(--spacing-xl);
+
+    .timeline-title {
+      text-align: center;
+      font-size: 32px;
+      font-weight: 600;
+      margin-bottom: var(--spacing-lg);
+      color: var(--heading-color);
+    }
+
+    .timeline {
+      position: relative;
+      max-width: 800px;
+      margin: 0 auto;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 30px;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: color-mix(in srgb, var(--default-color), transparent 80%);
+      }
+
+      .timeline-item {
+        position: relative;
+        margin-bottom: var(--spacing-lg);
+        padding-left: 80px;
+
+        .timeline-marker {
+          position: absolute;
+          left: 24px;
+          top: 8px;
+          width: 16px;
+          height: 16px;
+          border-radius: 50%;
+          background: var(--accent-color);
+          border: 4px solid var(--surface-color);
+          box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent-color), transparent 70%);
+        }
+
+        .timeline-content {
+          .timeline-year {
+            display: inline-block;
+            padding: 4px 12px;
+            background: color-mix(in srgb, var(--accent-color), transparent 90%);
+            color: var(--accent-color);
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 500;
+            margin-bottom: var(--spacing-xs);
+          }
+
+          h4 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: var(--spacing-xs);
+            color: var(--heading-color);
+          }
+
+          p {
+            font-size: 14px;
+            color: color-mix(in srgb, var(--default-color), transparent 25%);
+            margin: 0;
+            line-height: 1.6;
+          }
+        }
+      }
+    }
+  }
+
+  .philosophy-section {
+    margin-bottom: var(--spacing-xl);
+
+    .philosophy-content {
+      h2 {
+        font-size: 28px;
+        font-weight: 600;
+        margin-bottom: var(--spacing-md);
+        color: var(--heading-color);
+      }
+
+      .philosophy-text {
+        font-size: 18px;
+        line-height: 1.7;
+        color: color-mix(in srgb, var(--default-color), transparent 10%);
+        margin-bottom: var(--spacing-md);
+        font-style: italic;
+      }
+
+      .philosophy-highlights {
+        .highlight-item {
+          display: flex;
+          align-items: center;
+          gap: var(--spacing-sm);
+          margin-bottom: var(--spacing-xs);
+
+          i {
+            color: var(--accent-color);
+            font-size: 16px;
+          }
+
+          span {
+            font-size: 14px;
+            color: color-mix(in srgb, var(--default-color), transparent 20%);
+          }
+        }
+      }
+    }
+
+    .philosophy-image {
+      border-radius: var(--border-radius);
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: auto;
+        transition: transform 0.3s ease;
+      }
+
+      &:hover img {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  @media (max-width: 992px) {
+    .profile-header {
+      text-align: center;
+
+      .profile-stats {
+        justify-content: center;
+      }
+
+      .profile-actions {
+        justify-content: center;
+      }
+    }
+
+    .journey-timeline .timeline::before {
+      left: 20px;
+    }
+
+    .journey-timeline .timeline-item {
+      padding-left: 60px;
+
+      .timeline-marker {
+        left: 14px;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .profile-stats {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .profile-actions {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .philosophy-section .row {
+      flex-direction: column-reverse;
+    }
+
+    .philosophy-image {
+      margin-bottom: var(--spacing-md);
+    }
+  }
+
+  @media (max-width: 576px) {
+    .journey-timeline .timeline::before {
+      display: none;
+    }
+
+    .journey-timeline .timeline-item {
+      padding-left: 0;
+      text-align: center;
+
+      .timeline-marker {
+        position: static;
+        margin: 0 auto var(--spacing-xs);
+      }
+    }
+  }
+}
