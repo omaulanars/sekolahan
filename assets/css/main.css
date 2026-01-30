@@ -8633,7 +8633,7 @@ section,
 
 /* Fasilitas Page Header styles (migrated) */
 .page-header {
-  background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('../img/hero_sekolah.png');
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('../img/hero_sekolah.webp');
   background-size: cover;
   background-position: center;
   padding: 120px 0 60px;
@@ -8857,7 +8857,7 @@ section,
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 100%), url('../img/hero_sekolah.png');
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 100%), url('../img/hero_sekolah.webp');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
