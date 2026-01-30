@@ -458,6 +458,11 @@ h6 {
   line-height: 1;
 }
 
+.footer .footer-info .logo img {
+  max-width: 100%;
+  height: auto;
+}
+
 .footer .footer-info .logo span {
   color: var(--heading-color);
   font-size: 28px;
